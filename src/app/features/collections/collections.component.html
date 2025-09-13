@@ -1,0 +1,16 @@
+<div class="container my-5">
+  <h2 class="section-title">Our Collections</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let dress of dresses">
+      <div class="card h-100 shadow-sm">
+        <img [src]="dress.imageUrl" class="card-img-top" alt="{{dress.name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{dress.name}}</h5>
+          <p class="card-text">{{dress.description}}</p>
+          <p class="fw-bold">₹{{dress.price}}</p>
+          <a routerLink="/booking" class="btn btn-outline-dark">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
